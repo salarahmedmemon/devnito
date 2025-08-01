@@ -1,42 +1,147 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+@font-face {
+    font-family: "Poppins";
+    src: url("../public/fonts/poppins/Poppins-Regular.ttf");
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: 'Poppins';
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.circle {
+    /* background-image: url("../public/img/sectTwo/circle.png"); */
+    background-image: url("../public/img/sectTwo/circle.png");
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.gradient-border {
+    background: linear-gradient(90deg, #00f0ff, #9b00ff, #00f0ff);
+    background-size: 400% 400%;
+    animation: borderMove 6s linear infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+@keyframes borderMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.imageOne{
+    background-image: url("../public/img/sectThree/project1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.imageTwo{
+    background-image: url("../public/img/sectThree/project4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.imageThree{
+    background-image: url("../public/img/sectThree/project5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.imageFour{
+    background-image: url("../public/img/sectThree/project2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.imageFive{
+    background-image: url("../public/img/sectThree/project6.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.imageSix{
+    background-image: url("../public/img/sectThree/project3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.projectOne .overlay{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.sectSix {
+    background-image: url("../public/img/map.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0px 150px;
+}
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.faq-content.active {
+    max-height: 200px; /* adjust as needed */
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-slide {
+  animation: slide 20s linear infinite;
+}
+
+
+@keyframes upDownColumns {
+    0%   { transform: translateY(0); }
+    25%  { transform: translateY(-30px); }
+    50%  { transform: translateY(0); }
+    75%  { transform: translateY(30px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes downUpColumns {
+    0%   { transform: translateY(0); }
+    25%  { transform: translateY(30px); }
+    50%  { transform: translateY(0); }
+    75%  { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+}
+/* First & Third Columns: Move opposite to Second Column */
+.firstColumn img,
+.thirdColumn img {
+    animation: upDownColumns 3s ease-in-out infinite;
+}
+
+/* Second Column: Opposite animation */
+.secondColumn img {
+    animation: downUpColumns 3s ease-in-out infinite;
+}
+
+.sectOne > .rightSide > .firstCol > img:first-child{
+    position: absolute;
+    top: -50%;
+}
+
+.sectOne > .rightSide > .secondCol > img:first-child{
+    position: absolute;
+    top: -111.5%;
+}
+
+.sectOne > .rightSide > .thirdCol > img:first-child{
+    position: absolute;
+    top: 100%;
 }
