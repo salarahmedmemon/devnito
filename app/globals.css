@@ -12,6 +12,11 @@ body {
     font-family: 'Poppins';
 }
 
+.rightSide:hover img {
+  animation-play-state: paused !important;
+}
+
+
 .circle {
     /* background-image: url("../public/img/sectTwo/circle.png"); */
     background-image: url("../public/img/sectTwo/circle.png");
@@ -144,4 +149,30 @@ body {
 .sectOne > .rightSide > .thirdCol > img:first-child{
     position: absolute;
     top: 100%;
+}
+
+.nav-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.nav-list {
+  display: flex;
+  white-space: nowrap;
+  gap: 1.5rem; /* Tailwind class gap-6 equivalent */
+  position: absolute;
+  top: 1vw;
+  left: -13vw;
+}
+
+.nav-item {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav-item.active > a {
+  font-weight: 700;
+  /* Add any highlight styles */
 }

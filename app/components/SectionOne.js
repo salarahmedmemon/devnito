@@ -5,12 +5,17 @@ import { fetchSectionOne } from '@/sanity/lib/fetchSectionOne';
 
 const SectionOne = () => {
   const [section, setSection] = useState(null);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     fetchSectionOne().then(setSection);
   }, []);
 
   if (!section) return <div>Loading...</div>;
+
+  // Event handlers for hover
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => setIsHovered(false);
 
   return (
     <div className="sectOne w-full h-60 sm:h-[40vh] md:flex md:h-[87vh] overflow-hidden relative">
@@ -61,7 +66,16 @@ const SectionOne = () => {
       </div>
 
       {/* Desktop Images Section */}
-      <div className='hidden lg:flex rightSide w-full gap-5 justify-between items-center ms-60 h-full px-15'>
+      <div className='hidden lg:flex rightSide w-full gap-5 justify-between items-center ms-60 h-full px-15'
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        style={{
+          // Assuming animation is applied here or to children,
+          // pause it on hover, else run it.
+          animationPlayState: isHovered ? 'paused' : 'running',
+          WebkitAnimationPlayState: isHovered ? 'paused' : 'running', // Safari support
+        }}
+      >
         <div className='firstColumn relative w-40 h-full top-[-2vw]'>
           <img src={section.rightImagesUrls?.[0]} alt='image' />
           <img src={section.rightImagesUrls?.[0]} alt='image' />
