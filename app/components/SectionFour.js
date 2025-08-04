@@ -36,8 +36,50 @@ const SectionFour = () => {
         </p>
 
         {/* Clients Slider */}
-        <div className="overflow-hidden w-full pt-5 sm:pt-8 md:pt-20">
+        <div className="overflow-hidden flex items-center gap-5 w-full pt-5 sm:pt-8 md:pt-20">
           <div className="flex items-center gap-5 animate-slide w-max">
+            {[...clients, ...clients].map((client, index) => (
+              <div
+                key={index}
+                className="clientOne w-[150px] h-[180px] md:h-[200px] relative flex-shrink-0"
+              >
+                <img
+                  className="absolute inset-0 w-full h-full object-cover"
+                  src={client.imageUrl}
+                  alt={client.name || `Client ${index + 1}`}
+                />
+
+              </div>
+            ))}
+
+            {[...clients, ...clients].map((client, index) => (
+              <div
+                key={index}
+                className="clientOne w-[150px] h-[180px] md:h-[200px] relative flex-shrink-0"
+              >
+                <img
+                  className="absolute inset-0 w-full h-full object-cover"
+                  src={client.imageUrl}
+                  alt={client.name || `Client ${index + 1}`}
+                />
+
+              </div>
+            ))}
+
+            {[...clients, ...clients].map((client, index) => (
+              <div
+                key={index}
+                className="clientOne w-[150px] h-[180px] md:h-[200px] relative flex-shrink-0"
+              >
+                <img
+                  className="absolute inset-0 w-full h-full object-cover"
+                  src={client.imageUrl}
+                  alt={client.name || `Client ${index + 1}`}
+                />
+
+              </div>
+            ))}
+
             {[...clients, ...clients].map((client, index) => (
               <div
                 key={index}
@@ -53,6 +95,7 @@ const SectionFour = () => {
             ))}
           </div>
         </div>
+
       </div>
 
       <button

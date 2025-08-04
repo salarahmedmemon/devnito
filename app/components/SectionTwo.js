@@ -19,7 +19,7 @@ const SectionTwo = () => {
   const contentData = [
     {
       title: 'Digital Branding & Communication',
-      image: '/img/map.png',
+      image: '/img/sectTwo/dbc.jpeg',
       description: `Promote your business to the masses and build a strong reputation in the Market
       with our branding and communication services. Now you can focus on meeting
       the bottom line while we get your branding message across to the target audience.
@@ -36,7 +36,7 @@ const SectionTwo = () => {
     // ... other contentData entries unchanged ...
     {
       title: 'Web Development',
-      image: '/img/web-development.png',
+      image: '/img/sectTwo/rwd.jpeg',
       description: `Our web development team delivers fast, secure, and scalable websites tailored for your business needs.`,
       listTitle: 'Building Web Solutions that Perform:',
       listItems: [
@@ -49,7 +49,7 @@ const SectionTwo = () => {
     },
     {
       title: 'Video Animation',
-      image: '/img/video-animation.png',
+      image: '/img/sectTwo/va.jpeg',
       description: `Engaging and creative video animations to communicate your message effectively.`,
       listTitle: 'Our Video Animation Services Include:',
       listItems: [
@@ -62,7 +62,7 @@ const SectionTwo = () => {
     },
     {
       title: 'Digital Marketing',
-      image: '/img/digital-marketing.png',
+      image: '/img/sectTwo/dm.jpeg',
       description: `Comprehensive digital marketing strategies focused on growth and ROI.`,
       listTitle: 'Digital Marketing Tactics We Use:',
       listItems: [
@@ -75,7 +75,7 @@ const SectionTwo = () => {
     },
     {
       title: 'IT Resource',
-      image: '/img/it-resource.png',
+      image: '/img/sectTwo/itr.jpeg',
       description: `Providing expert IT resources for your project needs, scaling teams quickly.`,
       listTitle: 'IT Resource Services:',
       listItems: [
@@ -88,7 +88,7 @@ const SectionTwo = () => {
     },
     {
       title: 'UI/UX Design',
-      image: '/img/ui-ux-design.png',
+      image: '/img/sectTwo/uiux.jpeg',
       description: `User interface and experience design that delights customers and drives engagement.`,
       listTitle: 'Our UI/UX Design Expertise:',
       listItems: [
@@ -101,7 +101,7 @@ const SectionTwo = () => {
     },
     {
       title: 'Mobile App Development',
-      image: '/img/mobile-app-development.png',
+      image: '/img/sectTwo/mad.jpeg',
       description: `Building performant mobile applications for iOS and Android platforms.`,
       listTitle: 'Mobile Applications We Build:',
       listItems: [
@@ -114,7 +114,7 @@ const SectionTwo = () => {
     },
     {
       title: 'E-Commerce Web Development',
-      image: '/img/e-commerce.png',
+      image: '/img/sectTwo/ewd.jpeg',
       description: `End-to-end e-commerce solutions that grow your online business.`,
       listTitle: 'E-Commerce Services Included:',
       listItems: [
@@ -127,7 +127,7 @@ const SectionTwo = () => {
     },
     {
       title: 'Emerging Tech Development',
-      image: '/img/emerging-tech.png',
+      image: '/img/sectTwo/etd.jpeg',
       description: `Innovative solutions using blockchain, AI, and other emerging technologies.`,
       listTitle: 'Technologies We Work With:',
       listItems: [
@@ -282,8 +282,8 @@ const SectionTwo = () => {
         `}
         >
           {/* First Column - Image */}
-          <div className="flex justify-center items-center w-full sm:w-full md:w-100 mt-6 md:mt-20 bg-white rounded">
-            <img
+          <div className="flex justify-center items-center w-full sm:w-full md:w-200 md:rounded-lg mt-6 md:mt-20 bg-white rounded">
+            <img className='md:rounded-lg md:me-50'
               src={currentContent.image}
               alt={currentContent.title}
               // className="max-w-full h-auto sm:max-w-xs md:max-w-none"

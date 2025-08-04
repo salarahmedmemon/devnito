@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Header = () => {
   return (
-      <header className="bg-white w-[90%] sm:w-[95vw] md:w-[95vw] h-15 float-right mt-5 rounded-l-[15px] flex items-center justify-between">
+      <header className="bg-white w-[90%] sm:w-[95vw] md:w-[95vw] h-15 float-right mt-5 rounded-l-[15px] md:rounded-r-[15px] flex items-center justify-between md:relative md:top-0 md:left-[-50%] md:-translate-x-[-50%]">
         <div className="toggle md:hidden w-10 h-10 ml-5 flex items-center justify-center">
           <Image width={25} height={25} src="/img/header/toggleIcon.png" alt="Toggle" />
         </div>
